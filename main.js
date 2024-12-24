@@ -28,8 +28,8 @@ async function main() {
   scene_setup();
 
   const textureLoader = new THREE.TextureLoader();
-  const texture = textureLoader.load("img/2a.png");
-  const texture2 = textureLoader.load("img/2a.png");
+  const texture = textureLoader.load("./img/2a.png");
+  const texture2 = textureLoader.load("./img/2a.png");
 
   let varX = 0.1;
   let varY = 0.1;
@@ -49,7 +49,7 @@ async function main() {
     videoTexture: { type: "t" },
   };
 
-  const shaderCode = await loadShaderFile("glsl.glsl");
+  const shaderCode = await loadShaderFile("./glsl.glsl");
 
   let material = new THREE.ShaderMaterial({
     uniforms: uniforms,
